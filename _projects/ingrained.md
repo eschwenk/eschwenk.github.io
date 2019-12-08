@@ -22,7 +22,7 @@ This is an example of an atomic–resolution HAADF STEM image of a CdTe (100)-(1
 image credit: <a href="https://aip.scitation.org/doi/10.1063/1.5123169">Guo, Jinglong, <it>et al.</it> Appl. Phys. Lett. <b>115</b>, 153901 (2019)</a>
 
 ## Example Usage
-### <font color='#5EC6AA'>Input chemistry & orientation information for each grain.</font>
+### <font color='#81B14C'>Input chemistry & orientation information for each grain.</font>
 ```python
 # Import main ingrained package modules
 from ingrained.structure import Bicrystal
@@ -63,7 +63,7 @@ grain_2["tilt_angle"] = 0
 # maximum width (Å)
 grain_2["max_dimension"] = 40
 ```
-### <font color='#5EC6AA'> Initialize <code>Bicrystal</code> from grain information and setup optimization.</font> 
+### <font color='#81B14C'> Initialize <code>Bicrystal</code> from grain information and setup optimization.</font> 
 ```python
 bicrystal = Bicrystal([grain_1,grain_2], \
                        minmax_width=(10,40), \
@@ -87,7 +87,7 @@ congruity = CongruityBuilder(bicrystal=bicrystal,dm3=dm3_path)
 #    | iw | df | bx | by | px |
 x0 = [-0.1, 1.3, 0, 0.1, pixsz]
 ```
-### <font color='#5EC6AA'> Perform <b>constrained</b> minimization using a COBYLA solver.</font>
+### <font color='#81B14C'> Perform <b>constrained</b> minimization using a COBYLA solver.</font>
 ```python
 res1 = congruity.find_correspondence(optimizer='COBYLA', \
        initial_solution=x0, constraint_list=[iw,df,bx,by,px])
