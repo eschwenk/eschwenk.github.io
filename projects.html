@@ -1,0 +1,20 @@
+---
+title: Projects
+---
+<h1>Projects</h1>
+<ul>
+  {% for project in site.projects %}
+<!--     <div style="font-size:xx-large">&#8510;</div> -->
+    <a href="{{ project.url }}"><img src="{{ project.cover_path }}" width="800" title="{{ project.title }}" alt="{{ project.title }}"></a>
+<!--     <li> -->
+<!--     <h2>{{ project.name }}</h2> -->
+<!--     <h4>{{ project.tagline | markdownify }}</h4> -->
+    <p>{{ project.abstract }}</p>
+    <hr>
+
+<!--       <p>{{ project.content | markdownify }}</p> -->
+<!--     </li> -->
+  {% endfor %}
+</ul>
+
+
